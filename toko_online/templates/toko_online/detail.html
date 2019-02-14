@@ -1,0 +1,28 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="section-product"> 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-12"></div>
+            <div class="col-md-4 col-sm-6 col-12">
+                <div class="column-product">
+                    <div class="column-middle">
+                        <div class="product-img">
+                            <img src="{{ product.foto.url }}">
+                        </div>
+                        <div class="product-details">
+                            <p class="nama-produk">{{ product.nama }}</p>
+                            <p class="harga-produk">{{ product.harga }}</p>
+                            <p>Deskripsi Produk:</p>
+                            <p>{{ product.deskripsi_produk }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12"></div>
+        </div>
+    </div>
+</div>    
+{% endblock %}
